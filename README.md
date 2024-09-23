@@ -1,5 +1,5 @@
 # Future Cube Schematics
-这个项目是Future Cube团队为Angular项目定制的schematics，用于生成和管理项目中的组件、服务、指令等。
+这个项目是Future Cube团队为Angular项目定制的schematics，基于ng-alain的schematics进行增强，初始化一些登陆页面/认证方式/拦截器等的修改。
 
 # Getting Started With Schematics
 

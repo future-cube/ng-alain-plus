@@ -2,8 +2,8 @@ name: Publish to npm
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*.*.*'  # 仅在创建符合 vX.X.X 格式的标签时触发
 
 jobs:
   publish:
