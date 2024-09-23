@@ -1,6 +1,6 @@
 {
   "name": "@future-cube/ng-alain-plus",
-  "version": "v0.0.7",
+  "version": "0.0.8",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",

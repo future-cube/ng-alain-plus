@@ -26,7 +26,7 @@ calculate_new_version() {
   local new_major=$((major + 1))
   local new_minor=$((minor + 1))
   local new_patch=$((patch + 1))
-  echo "v$new_major.0.0 v$major.$new_minor.0 v$major.$minor.$new_patch"
+  echo "$new_major.0.0 $major.$new_minor.0 $major.$minor.$new_patch"
 }
 
 # 更新 package.json 中的版本号
@@ -58,7 +58,7 @@ update_package_version_prompt() {
 
   case $version_choice in
     0)
-      read -p "请输入新版本号: " new_version
+      read -p "请输入新版本号(例: 1.0.0): " new_version
       ;;
     1)
       new_version=$new_major_version
@@ -101,9 +101,9 @@ package_tag() {
   fi
 
   new_version=$(jq -r '.version' package.json)
-  git tag $new_version
-  git push origin $new_version
-  echo "已更新到 GitHub 并打包标签版本 $new_version。"
+  git tag "v$new_version"
+  git push origin "v$new_version"
+  echo "已更新到 GitHub 并打包标签版本 v$new_version。"
 }
 
 # 主程序
