@@ -1,6 +1,6 @@
 {
   "name": "@future-cube/ng-alain-plus",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -9,6 +9,13 @@
   "keywords": [
     "schematics"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/future-cube/ng-alain-plus.git"
+  },
   "author": "Xing Koo",
   "license": "MIT",
   "schematics": "./src/collection.json",
